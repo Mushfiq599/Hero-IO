@@ -1,6 +1,9 @@
 import { Link } from "react-router-dom";
 import AppCard from "../components/AppCard";
 import { appsData } from "../data/appsData";
+import { IoLogoGooglePlaystore } from "react-icons/io5";
+import { FaAppStoreIos } from "react-icons/fa";
+import banner from "../assets/hero.png"
 
 function StatCard({ value, label }) {
   return (
@@ -17,14 +20,17 @@ export default function Home() {
   return (
     <div className="w-full">
       {/* HERO / BANNER (Figma Page 1) */}
-      <section className="max-w-6xl mx-auto px-4 pt-10 pb-8">
-        <div className="text-center max-w-3xl mx-auto">
-          <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight text-gray-900">
-            We Build{" "}
-            <span className="text-purple-600">Productive&nbsp;Apps</span>
-          </h1>
+      <section className="max-w-6xl mx-auto mt-10 px-4 pt-10">
+  <div className="text-center max-w-3xl mx-auto">
+    <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-gray-700">
+      We Build{" "}
+      <span className="bg-gradient-to-r from-[#632EE3] to-[#9F62F2] bg-clip-text text-transparent">
+        Productive
+      </span>{" "}
+      Apps
+    </h1>
 
-          <p className="mt-4 text-gray-600 leading-relaxed">
+          <p className="mt-4 text-[#627382] leading-relaxed">
             At HERO.IO, we craft innovative apps designed to make everyday life
             simpler, smarter, and more exciting. Our goal is to turn your ideas
             into digital experiences that truly make an impact.
@@ -32,29 +38,38 @@ export default function Home() {
 
           <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-3">
             <a
-              className="btn bg-purple-600 hover:bg-purple-700 text-white border-none rounded-md"
+              className="btn text-lg text-black hover:bg-gradient-to-r from-[#632EE3] to-[#9F62F2] hover:text-white rounded-md"
               href="https://play.google.com/store"
               target="_blank"
               rel="noreferrer"
             >
+              <IoLogoGooglePlaystore />
               Google Play
             </a>
 
             <a
-              className="btn btn-outline border-purple-600 text-purple-600 hover:bg-purple-600 hover:text-white rounded-md"
+              className="btn text-lg hover:bg-gradient-to-r from-[#632EE3] to-[#9F62F2] hover:text-white rounded-md"
               href="https://www.apple.com/app-store/"
               target="_blank"
               rel="noreferrer"
             >
+              <FaAppStoreIos />
               App Store
             </a>
           </div>
+        </div>
+        <div>
+          <img
+                                src={banner}
+                                alt="Logo"
+                                className="mt-10 mx-auto w-full max-w-full"
+                              />
         </div>
       </section>
 
       {/* STATS STRIP (Figma Page 1 purple section) */}
       <section className="bg-purple-600">
-        <div className="max-w-6xl mx-auto px-4 py-10">
+        <div className="max-w-6xl mx-auto py-10">
           <h2 className="text-center text-white font-semibold text-lg md:text-xl">
             Trusted by Millions, Built for You
           </h2>

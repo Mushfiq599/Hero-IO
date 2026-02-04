@@ -11,6 +11,12 @@ export function installApp(app) {
   }
 }
 
+export function uninstallApp(id) {
+  const installed = getInstalledApps();
+  const updated = installed.filter((a) => a.id !== id);
+  localStorage.setItem(KEY, JSON.stringify(updated));
+}
+
 export function isInstalled(id) {
   return getInstalledApps().some((a) => a.id === id);
 }
