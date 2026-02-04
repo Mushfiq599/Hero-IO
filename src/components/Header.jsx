@@ -12,7 +12,7 @@ const linkClass = ({ isActive }) =>
 export default function Header() {
   return (
     <header className="bg-white">
-      <div className="max-w-full px-4 py-4 flex items-center justify-between">
+      <div className="max-w-full px-30 py-4 flex items-center justify-between">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2">
           <img
