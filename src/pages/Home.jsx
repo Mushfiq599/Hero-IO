@@ -14,10 +14,8 @@ function StatCard({ value, label, details }) {
     </div>
   );
 }
-
 export default function Home() {
   const topApps = appsData.slice(0, 8);
-
   return (
     <div className="w-full">
       <section className="max-w-6xl mx-auto mt-10 px-4 pt-10">
@@ -31,13 +29,11 @@ export default function Home() {
       </span>{" "}
       Apps
     </h1>
-
           <p className="mt-4 text-[#627382] leading-relaxed">
             At HERO.IO, we craft innovative apps designed to make everyday life
             simpler, smarter, and more exciting. Our goal is to turn your ideas
             into digital experiences that truly make an impact.
           </p>
-
           <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-3">
             <a
               className="btn text-lg text-black hover:bg-gradient-to-r from-[#632EE3] to-[#9F62F2] hover:text-white rounded-md"
@@ -68,7 +64,6 @@ export default function Home() {
           <h2 className="text-center text-white font-bold text-4xl md:text-5xl">
             Trusted by Millions, Built for You
           </h2>
-
           <div className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-4">
             <StatCard value="29.6M" label="Total Downloads" details="21% more than last month" />
             <StatCard value="906K" label="Total Reviews" details="46% more than last month" />
@@ -85,13 +80,11 @@ export default function Home() {
             Explore All Trending Apps on the Market developed by us
           </p>
         </div>
-
         <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {topApps.map((app) => (
             <AppCard key={app.id} app={app} />
           ))}
         </div>
-
         <div className="mt-10 flex justify-center">
           <Link
             to="/apps"

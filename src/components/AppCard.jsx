@@ -8,22 +8,11 @@ export default function AppCard({ app }) {
   const handleClick = () => {
     navigate(`/apps/${app.id}`);
   };
-
   return (
-    <button
-      type="button"
-      onClick={handleClick}
-      className="w-full text-left"
-      aria-label={`Open details for ${app.title}`}
-    >
+    <button type="button" onClick={handleClick} className="w-full text-left" aria-label={`Open details for ${app.title}`}>
       <div className="bg-white rounded-xl shadow-md hover:shadow-lg transition p-2 items-center gap-4">
         <div className="w-63 h-56 rounded-xl overflow-hidden flex-shrink-0">
-          <img
-            src={app.image}
-            alt={app.title}
-            className="w-full h-full object-cover"
-            loading="lazy"
-          />
+          <img src={app.image} alt={app.title} className="w-full h-full object-cover" loading="lazy" />
         </div>
         <div className="flex-1 min-w-0">
           <h3 className="font-medium text-gray-900">{app.title}</h3>

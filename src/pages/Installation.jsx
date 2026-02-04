@@ -9,14 +9,12 @@ export default function Installation() {
   useEffect(() => {
     setInstalled(getInstalledApps());
   }, []);
-
   const sortedInstalled = useMemo(() => {
     const list = [...installed];
     if (sort === "high-low") list.sort((a, b) => b.downloads - a.downloads);
     if (sort === "low-high") list.sort((a, b) => a.downloads - b.downloads);
     return list;
   }, [installed, sort]);
-
   const showToast = (msg) => {
     const el = document.getElementById("install-page-toast");
     if (!el) return;
@@ -24,14 +22,12 @@ export default function Installation() {
     el.classList.remove("hidden");
     setTimeout(() => el.classList.add("hidden"), 2000);
   };
-
   const handleUninstall = (id) => {
     uninstallApp(id);
     const updated = getInstalledApps();
     setInstalled(updated);
     showToast("App Uninstalled Successfully!");
   };
-
   return (
     <div className="max-w-7xl mx-auto px-4 py-10">
       <div className="text-center max-w-3xl mx-auto">
@@ -46,7 +42,6 @@ export default function Installation() {
         <div className="text-gray-800 font-medium">
           ({installed.length}) Installed Apps
         </div>
-
         <div className="w-full sm:w-64">
           <select
             className="select select-bordered w-full"

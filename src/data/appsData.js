@@ -1,4 +1,3 @@
-
 export const appsData = [
   {
     id: 1,
