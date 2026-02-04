@@ -6,6 +6,5 @@ export function formatDownloads(num) {
 }
 
 export function formatRating(rating) {
-  // keep one decimal like 4.9
   return Number(rating).toFixed(1).replace(".0", "");
 }

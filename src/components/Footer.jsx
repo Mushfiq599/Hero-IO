@@ -6,7 +6,6 @@ export default function Footer() {
   return (
     <footer className="bg-[#081c2f] text-white mt-10">
       <div className="max-w-full mx-auto px-30 py-10 flex flex-col md:flex-row items-center justify-between gap-8">
-        {/* Left */}
         <Link to="/" className="flex items-center gap-2">
           <img
                       src={Logo}
@@ -17,8 +16,6 @@ export default function Footer() {
             HERO.IO
           </span>
         </Link>
-
-        {/* Right */}
         <div className="text-center md:text-right">
           <p className="text-xl text-white mb-3">Social Links</p>
           <div className="flex items-center justify-center md:justify-end gap-3">

@@ -1,5 +1,3 @@
-// src/data/appsData.js
-// Minimum 12–20 objects ✅ (Here: 16)
 
 export const appsData = [
   {

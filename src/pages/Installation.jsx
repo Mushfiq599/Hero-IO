@@ -4,7 +4,7 @@ import { getInstalledApps, uninstallApp } from "../utils/storage";
 
 export default function Installation() {
   const [installed, setInstalled] = useState([]);
-  const [sort, setSort] = useState("none"); // none | high-low | low-high
+  const [sort, setSort] = useState("none");
 
   useEffect(() => {
     setInstalled(getInstalledApps());
@@ -33,18 +33,15 @@ export default function Installation() {
   };
 
   return (
-    <div className="max-w-6xl mx-auto px-4 py-10">
-      {/* Title (Figma style) */}
+    <div className="max-w-7xl mx-auto px-4 py-10">
       <div className="text-center max-w-3xl mx-auto">
         <h1 className="text-3xl md:text-4xl font-bold text-gray-900">
           My Installation
         </h1>
         <p className="mt-2 text-gray-600">
-          Manage your installed apps. You can uninstall anytime.
+          Explore All Trending Apps on the Market developed by us
         </p>
       </div>
-
-      {/* Top Row: count + sort dropdown */}
       <div className="mt-10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
         <div className="text-gray-800 font-medium">
           ({installed.length}) Installed Apps
@@ -62,8 +59,6 @@ export default function Installation() {
           </select>
         </div>
       </div>
-
-      {/* Content */}
       {sortedInstalled.length === 0 ? (
         <div className="mt-12 text-center">
           <h2 className="text-2xl font-bold text-gray-900">
@@ -74,7 +69,7 @@ export default function Installation() {
           </p>
         </div>
       ) : (
-        <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className=" w-full mt-10 grid grid-cols-1 gap-4">
           {sortedInstalled.map((app) => (
             <InstalledAppCard
               key={app.id}
@@ -84,8 +79,6 @@ export default function Installation() {
           ))}
         </div>
       )}
-
-      {/* Toast */}
       <div
         id="install-page-toast"
         className="hidden fixed bottom-6 right-6 alert alert-info shadow-lg"

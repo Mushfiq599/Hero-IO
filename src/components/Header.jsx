@@ -13,7 +13,6 @@ export default function Header() {
   return (
     <header className="bg-white">
       <div className="max-w-full px-30 py-4 flex items-center justify-between">
-        {/* Logo */}
         <Link to="/" className="flex items-center gap-2">
           <img
                       src={Logo}
@@ -25,7 +24,6 @@ export default function Header() {
           </span>
         </Link>
 
-        {/* Desktop Nav */}
         <nav className="hidden md:flex items-center gap-2">
           <NavLink to="/" end className={linkClass}>
             Home
@@ -38,7 +36,6 @@ export default function Header() {
           </NavLink>
         </nav>
 
-        {/* Contribute */}
         
         <a
           href="https://github.com/mushfiq599"
@@ -51,7 +48,6 @@ export default function Header() {
         </a>
       </div>
 
-      {/* Mobile Nav */}
       <div className="md:hidden px-4 pb-3 flex items-center gap-2">
         <NavLink to="/" end className={linkClass}>
           Home

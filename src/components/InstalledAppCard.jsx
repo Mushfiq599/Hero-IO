@@ -1,8 +1,9 @@
+import { FaDownload, FaStar } from "react-icons/fa";
 import { formatDownloads, formatRating } from "../utils/format";
 
 export default function InstalledAppCard({ app, onUninstall }) {
   return (
-    <div className="bg-white rounded-xl border p-4 flex items-center gap-4">
+    <div className="bg-white rounded-xl shadow p-4 flex items-center justify-between gap-4">
       <div className="w-14 h-14 rounded-xl overflow-hidden flex-shrink-0">
         <img
           src={app.image}
@@ -13,16 +14,19 @@ export default function InstalledAppCard({ app, onUninstall }) {
       </div>
 
       <div className="flex-1 min-w-0">
-        <h3 className="font-semibold text-gray-900 truncate">{app.title}</h3>
-        <p className="text-xs text-gray-500 truncate">{app.companyName}</p>
+        <h3 className="font-semibold text-2xl text-gray-600 ">{app.title}</h3>
 
-        <div className="mt-2 flex items-center gap-4 text-sm text-gray-600">
-          <span className="flex items-center gap-1">
-            <span className="opacity-70">⬇</span>
+        <div className="mt-2 flex items-center gap-4 text-sm ">
+          <span className="flex items-center text-green-500 gap-1">
+            <span >
+                <FaDownload />
+            </span>
             {formatDownloads(app.downloads)}
           </span>
-          <span className="flex items-center gap-1">
-            <span className="text-yellow-500">★</span>
+          <span className="flex items-center text-yellow-500 gap-1">
+            <span >
+                <FaStar />
+            </span>
             {formatRating(app.ratingAvg)}
           </span>
         </div>
